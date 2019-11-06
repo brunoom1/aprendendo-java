@@ -1,5 +1,6 @@
 
 import java.awt.Frame;
+import java.awt.Label;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -8,6 +9,10 @@ public class Window extends Frame{
 	public static void main (String args[]) {
 		Window win = new Window();
 		win.setSize(400, 400);
+		
+		Label lbl = new Label(Saudacao.digaHello("Gabriel"), Label.CENTER);
+		win.add(lbl);
+		
 		win.addWindowListener(new WindowListener() {
 			
 			@Override
